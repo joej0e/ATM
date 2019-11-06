@@ -8,10 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "face_values")
-public class FaceValue {
+@Table(name = "banknotes")
+public class Banknote {
     @Id
-    @Column(name = "face_value_id")
+    @Column(name = "banknote_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -19,7 +19,7 @@ public class FaceValue {
 
     private Long quantity;
 
-    public FaceValue(){}
+    public Banknote(){}
 
     public Long getId() {
         return id;
