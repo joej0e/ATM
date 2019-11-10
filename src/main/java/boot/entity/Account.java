@@ -23,9 +23,10 @@ public class Account {
     private Long balance;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinTable(name = "clients_accounts", joinColumns =
-    @JoinColumn(name = "account_id", referencedColumnName = "account_id"),
-            inverseJoinColumns = @JoinColumn(name = "client_id", referencedColumnName = "client_id"))
+    @JoinTable(name = "clients_accounts",
+            joinColumns = @JoinColumn(name = "account_id", referencedColumnName = "account_id"),
+            inverseJoinColumns = @JoinColumn(name = "client_id",
+                    referencedColumnName = "client_id"))
     private Client client;
 
     public Account(){}
